@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Should be compiled with 'pdflatex -jobname="STUDIENUUMMER_FULLNAME" main.tex' %
+% REMEMBER TO REMOVE 'CheatSheet' BEFORE HANDING IN                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage[parfill]{parskip}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{semantic}
+\usetikzlibrary{automata, positioning, arrows}
+\tikzset{
+    ->,
+    node distance=3cm, 
+    every state/.style={thick, fill=gray!10}
+}
+
+
+\DeclareCaptionType{equ}[Equation][List of Equations]
+\DeclareCaptionListFormat{equ}{%
+    #1 #2
+}
+\DeclareCaptionLabelFormat{equ}
+{%
+    #1 #2:
+}
+\DeclareCaptionLabelSeparator{equ}{}
+\DeclareCaptionFormat{equ}
+{%
+    \textbf{#1#2}#3
+}
+\captionsetup[equ]
+{
+    format=equ,
+    labelformat=equ,
+    listformat=simple,
+    skip=-5pt,
+    labelsep=equ,
+}
+
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil{#1}\right\rceil}
+
+\title{Syntax and Semantics Exam}
+
+\author{NAME}
+\date{June 2022}
+
+\makeatletter
+\AtBeginDocument{\let\c@equation\c@equ}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\include{CheatSheet} %%%%% REMEMBER TO REMOVE THIS BEFORE HANDING IN
+\include{Exam}
+
+
+\end{document}
