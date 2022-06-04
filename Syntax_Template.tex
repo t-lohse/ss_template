@@ -1,6 +1,6 @@
 \section*{Syntax}
 
-
+% This is one way to do it, directly in latex using tikz
 \begin{figure}[H]
     \centering 
     \begin{tikzpicture}
@@ -17,3 +17,12 @@
     \caption{Caption of the Figure}
     \label{fig:label}
 \end{figure}
+
+% I recommend using graphviz instead, which compiles a .gv file into a picture, and just uploading that
+% See 'FA_Template.gv' for an example and how to compile it
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{FA_template.jpg}
+    \caption{Caption of Figure}
+    \label{fig:label2}
+\end{figure}
+

@@ -1,0 +1,40 @@
+// 'dot -Txlib FILENAME.gv' to have dynamic preview
+// COMPILE WITH
+//      dot -Tjpg FA_Template.gv -o FA_Template.jpg
+// or similar with .png
+
+
+digraph finite_state_machine {
+	// Setup
+	fontname="Helvetica,Arial,sans-serif"
+	label="Template"
+	labelloc = "t" // b 
+	labeljust = "c" // l r
+	node [fontname="Helvetica,Arial,sans-serif"]
+	edge [fontname="Helvetica,Arial,sans-serif"]
+	rankdir=LR; // RL TB BT
+    /*
+    ranksep = 1.5
+    nodesep = .25
+    */
+
+	// Actual code
+	node [shape = doublecircle]; "{0}" 3 4 8;
+	node [shape = circle];
+    _ [style = "invis"];
+    _ -> "{0}";
+	"{0}" -> 2 [label = "3, a → T"];
+	"{0}" -> 1 [label = "SS(S)"];
+	1 -> 3 [label = "ε"];
+	2 -> 6 [label = "SS(b)"];
+	2 -> 5 [label = "SS(a)"];
+	2 -> 4 [label = "S(A)"];
+	5 -> 7 [label = "S(b)"];
+	5 -> 5 [label = "S(a)"];
+	6 -> 6 [label = "S(b)"];
+	6 -> 5 [label = "S(a)"];
+	7 -> 8 [label = "S(b)"];
+	7 -> 5 [label = "S(a)"];
+	8 -> 6 [label = "S(b)"];
+	8 -> 5 [label = "S(ababab)"];
+}
