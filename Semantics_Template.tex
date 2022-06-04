@@ -1,16 +1,11 @@
 \section*{Semantics}
 \begin{equ}[H]
     \begin{align*}
-        [ASS_{BSS}] \quad & env_V, env_P \vdash \langle x := a, sto\rangle \rightarrow a sto[l\rightarrow v]\\
-        & \text{where } env_V, sto \vdash a \rightarrow_a v\\
-        & \text{and } env_V x = l\\ \\
-        [WHILE\text{-}TRUE_{BSS}] \quad & \inference{ env_V, env_P \vdash \langle S,sto\rangle\rightarrow sto''\\env_V, env_P \vdash \langle\texttt{while $b$ do $S$}, sto''\rangle \rightarrow sto'}{ env_V, env_P \vdash \langle\texttt{while $b$ do $S$}, sto\rangle \rightarrow sto'}\\
-        & \text{if } env_V, sto \vdash b \rightarrow_b tt = env_V(next) \\\\
-        [IF\text{-}TRUE_{BSS}] \quad & \inference{env_V, env_P \vdash \langle S_1,sto\rangle \rightarrow sto'}{env_V, env_P \vdash \langle\texttt{if $b$ then $S_1$ else $S_2$} \rangle \rightarrow sto'}\\
-        & \text{if } env_V, sto \vdash b \rightarrow_b tt = env_V(next) \\\\
-        [VAR_{EXP}] \quad & \inference{E(x)=T}{E\vdash x:T}\\\\
-        [ADD\text{-}NUMBER_{EXP}] \quad & \inference{E \vdash e_{1}\texttt{:number} \quad E \vdash e_{2}\texttt{:number}}{E \vdash e_{1} + e_{2} \texttt{:number} }& \\\\
-        [AND_{EXP}] \quad & \inference{E \vdash e_{1} \texttt{:bool}\quad E \vdash e_{2} \texttt{:bool}}{E \vdash e_1 \&\& e_2 :\texttt{bool}}
+        [TEMP_{BSS}] \quad & lorem \vdash \langle ipsum\rangle \rightarrow yes\\
+            & \text{where } something \\
+            & \text{and } lol \\
+        [OTHER_{BSS}] \quad & \inference{something}{something}\\
+        & \text{if } lol \\
     \end{align*}
     \caption{Caption of Equation}
     \label{equ:label}
@@ -18,6 +13,6 @@
 
 Other equation:
 \begin{equation}
-    [ADD\text{-}NUMBER_{EXP}] \quad \inference{a1 \rightarrow v1 \quad a2 \rightarrow v2}{a1+a2=v} \quad \text{where } v = v1 + v2
+    [lol\text{-}lol_{EXP}] \quad \inference{hey \rightarrow yo \quad a2 \rightarrow v2}{heyo} \quad \text{where } dean
     \label{equ:other_equation}
 \end{equation}
